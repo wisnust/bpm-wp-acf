@@ -1,0 +1,39 @@
+{
+    "key": "group_6424bedde0cc1",
+    "title": "Header - Contact Button",
+    "fields": [
+        {
+            "key": "field_6424bf1d69cd0",
+            "label": "Contact Button",
+            "name": "contact_button",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-header"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1680129830
+}

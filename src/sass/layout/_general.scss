@@ -2,6 +2,7 @@ html {
     font-size: 15px;
 }
 body {
+    color: $color-black;
     font-family: $Poppins;
     margin: 0 !important;
     .site {
@@ -10,7 +11,12 @@ body {
 }
 
 a {
-    transition: border .3s, color .3s;
+    color: $color-black;
+    transition: border .3s, color .3s, background .3s;
+    text-decoration: none;
+    &:hover, &:focus {
+        color: $color-green;
+    }
 }
 
 .container {
@@ -23,14 +29,33 @@ a {
         max-width: 540px;
     }
     @include mq('medium') {
-        max-width: 720px;
+        max-width: 1040px;
     }
     @include mq('large') {
         padding-right: 15px;
         padding-left: 15px;
-        max-width: 960px;
+        max-width: 1200px;
     }
     @include mq('xlarge') {
-        max-width: 1210px;
+        max-width: 1270px;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+    > a {
+        color: $color-grey;
+        border: 1px solid $color-grey;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-white;
+        &:hover, &:focus {
+            color: $color-white;
+            background-color: $color-black;
+        }
     }
 }

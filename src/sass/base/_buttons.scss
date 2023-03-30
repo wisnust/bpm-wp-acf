@@ -1,14 +1,40 @@
 @mixin btn_custom() {
-    
-    &:hover, &:focus {
-        
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+    padding: 9px 20px 7px;
+    border: 1px solid $color-black;
+    border-radius: 0;
+    text-transform: uppercase;
+    > i {
+        margin-left: 5px;
     }
-    
+    &:hover, &:focus {
+        border-color: $color-green;
+    }
+    &.btn-outline {
+        background-color: transparent;
+        &:hover, &:focus {
+            color: $color-white;
+            border-color: $color-black;
+            background-color: $color-black;
+        }
+    }
+    &.btn-green {
+        color: $color-white;
+        background-color: $color-green;
+        border-color: $color-green;
+        &:hover, &:focus {
+            background-color: darken($color-green, 10%);
+        }
+    }
     @include mq('medium', 'max') {
-        font-size: 14px;
     }
 }
 
-.btn.btn-primary {
+.btn {
+    @include btn_custom();
+}
+.btn {
     @include btn_custom();
 }

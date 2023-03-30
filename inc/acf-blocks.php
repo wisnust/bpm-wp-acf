@@ -34,20 +34,20 @@ function register_acf_block_types() {
 
     // Block Hero
     acf_register_block_type(array(
-        'name'              => 'hero',
-        'title'             => __('Hero'),
-        'description'       => __('Used to display Hero block'),
-        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/Hero.php',
+        'name'              => 'hero-cta',
+        'title'             => __('Hero CTA'),
+        'description'       => __('Used to display Hero CTA block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/HeroCTA.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
         'category'          => 'five-tool-acf-blocks',
         'icon'              => 'format-aside',
-        'keywords'          => array( 'hero' ),
+        'keywords'          => array( 'hero', 'cta' ),
         'example'  => array(
             'attributes' => array(
                 'mode' => 'preview',
                 'data' => array(
-                    'hero_component_preview' => get_template_directory_uri() . '/acf-preview-images/hero-component-preview.png',
+                    'hero_cta_component_preview' => get_template_directory_uri() . '/acf-preview-images/hero-cta-component-preview.png',
                 )
             )
         )

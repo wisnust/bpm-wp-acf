@@ -37,8 +37,11 @@ h3, .h3 {
 }
 h4, .h4 {
     font-size: 26px;
+    font-family: $Lora;
+    font-weight: 500;
+    margin-bottom: 18px;
     @include mq('medium', 'max') {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 h5, .h5 {

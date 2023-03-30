@@ -97,9 +97,39 @@ a {
     }
     &.reverse {
         &:before {
-            left: inherit;
-            right: 100%;
+            left: 0;
+            right: inherit;
         }
+    }
+}
+
+.section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+    .section-title {
+        margin-bottom: 50px;
+        h2 {
+            margin-bottom: 40px;
+        }
+        p {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .title-line {
+            &.reverse {
+                top: 10px;
+                left: -100px;
+            }
+        }
+    }
+    @include mq('large', 'max') {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+    @include mq('medium', 'max') {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 }
 

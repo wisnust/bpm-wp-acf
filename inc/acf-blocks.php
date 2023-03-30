@@ -32,7 +32,7 @@ add_filter( 'block_categories', 'five_tool_block_categories', 10, 2 );
 
 function register_acf_block_types() {
 
-    // Block Hero
+    // Block Hero CTA
     acf_register_block_type(array(
         'name'              => 'hero-cta',
         'title'             => __('Hero CTA'),
@@ -48,6 +48,27 @@ function register_acf_block_types() {
                 'mode' => 'preview',
                 'data' => array(
                     'hero_cta_component_preview' => get_template_directory_uri() . '/acf-preview-images/hero-cta-component-preview.png',
+                )
+            )
+        )
+    ));
+
+    // Block Our Services
+    acf_register_block_type(array(
+        'name'              => 'our-services',
+        'title'             => __('Our Services'),
+        'description'       => __('Used to display Our Services block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/OurServices.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'five-tool-acf-blocks',
+        'icon'              => 'format-aside',
+        'keywords'          => array( 'our', 'services' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'our_services_component_preview' => get_template_directory_uri() . '/acf-preview-images/our-services-component-preview.png',
                 )
             )
         )

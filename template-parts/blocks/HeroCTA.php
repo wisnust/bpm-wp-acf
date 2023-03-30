@@ -33,7 +33,7 @@ $gridCtaLink = get_field('grid_cta_link');
 $gridCtaImage = get_field('grid_cta_image');
 
 ?>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> bg-indigo-800 bg-theme-color">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
   <div class="container">
     <div class="hero-cta-title">
       <?php if ( $heroCtaTitle ): ?>

@@ -35,6 +35,17 @@
 .btn {
     @include btn_custom();
 }
-.btn {
-    @include btn_custom();
+.btn-link {
+    color: $color-black;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2.2px;
+    text-decoration: none;
+    > i {
+        margin-left: 5px;
+    }
+    &:hover, &:focus {
+        color: $color-green;
+    }
 }

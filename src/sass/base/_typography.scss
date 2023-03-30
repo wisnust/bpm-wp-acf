@@ -16,6 +16,9 @@ h3, .h3 {
     font-size: 36px;
     line-height: 1.2;
     margin-bottom: 10px;
+    @include mq('large', 'max') {
+        font-size: 32px;
+    }
     @include mq('medium', 'max') {
         font-size: 24px;
     }

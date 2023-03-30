@@ -1,0 +1,79 @@
+.navbar {
+  .navbar-wrapper {
+    border-top: 1px solid $color-black;
+    border-bottom: 1px solid $color-black;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-weight: 500;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+        padding: 25px 26px;
+      }
+    }
+  }
+  @include mq('large', 'max') {
+    padding: 15px 0;
+    box-shadow: 0px 2px 4px rgba($color-black, .2);
+    .navbar-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 0;
+    }
+    .navbar-toggler {
+      background-color: $color-white;
+      padding: 15px;
+      position: relative;
+      right: -15px;
+      outline: none !important;
+      box-shadow: none !important;
+      &.is-active { 
+        .hamburger-inner {
+          background-color: $color-green;
+          &:after, &:before {
+            background-color: $color-green;
+          }
+        }
+      }
+    }
+    .navbar-brand {
+      img {
+        width: 220px;
+      }
+    }
+    .navbar-collapse {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      background-color: $color-white;
+      background: #fff;
+      border-top: 1px solid rgba($color-black, .3);
+      box-shadow: 0px 4px 3px rgba($color-black, .2);
+    }
+  }
+}
+
+.top-nav {
+  .top-nav-socials {
+    padding: 40px 0 28px;
+  }
+  .top-nav-logo {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+  .top-nav-contact {
+    text-align: right;
+    padding: 32px 0;
+  }
+}

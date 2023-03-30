@@ -16,10 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
@@ -30,7 +29,7 @@
 
 	<header id="masthead" class="site-header">
 		<!-- TOP NAV -->
-		<nav id="top-nav" class="d-none d-md-block">
+		<nav id="top-nav" class="d-none d-lg-block top-nav">
 			<div class="container">
 				<div class="row">
 					<div class="col-3">
@@ -39,9 +38,11 @@
 						</div>
 					</div>
 					<div class="col-6">
-						<a class="top-nav-logo" href="<?php echo get_home_url(); ?>">
-							<img width="326" src="<?php echo esc_url( get_header_image() ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>" />
-						</a>
+						<div class="top-nav-logo">
+							<a href="<?php echo get_home_url(); ?>">
+								<img width="326" src="<?php echo esc_url( get_header_image() ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>" />
+							</a>
+						</div>
 					</div>
 					<div class="col-3">
 						<div class="top-nav-contact">
@@ -57,27 +58,36 @@
 			</div>
 		</nav>
 		<!-- MAIN NAV -->
-		<nav id="site-navigation" class="navbar navbar-expand-md navbar-light bg-light">
+		<nav id="site-navigation" class="navbar navbar-expand-lg navbar-light bg-white p-lg-0">
 			<div class="container">
-				<a class="navbar-brand d-block d-md-none" href="<?php echo get_home_url(); ?>">
-					<img width="220px" src="<?php echo esc_url( get_header_image() ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>" />
-				</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="main-menu">
-					<?php
-					wp_nav_menu(array(
-						'theme_location' => 'main-menu',
-						'container' => false,
-						'menu_class' => '',
-						'fallback_cb' => '__return_false',
-						'items_wrap' => '<ul id="%1$s" class="navbar-nav me-auto mb-2 mb-md-0 %2$s">%3$s</ul>',
-						'depth' => 2,
-						'walker' => new bootstrap_5_wp_nav_menu_walker()
-					));
-					?>
-				</div>
+				<div class="navbar-wrapper w-100">
+					<a class="navbar-brand d-block d-lg-none" href="<?php echo get_home_url(); ?>">
+						<img width="220px" src="<?php echo esc_url( get_header_image() ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'title' ) ); ?>" />
+					</a>
+					<button 
+						class="d-lg-none hamburger hamburger--elastic navbar-toggler" 
+						type="button"
+						aria-label="Menu" 
+						aria-controls="navigation"
+						data-bs-toggle="collapse" data-bs-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="hamburger-box">
+							<span class="hamburger-inner"></span>
+						</span>
+					</button>
+					<div class="collapse navbar-collapse" id="main-menu">
+						<?php
+						wp_nav_menu(array(
+							'theme_location' => 'main-menu',
+							'container' => false,
+							'menu_class' => '',
+							'fallback_cb' => '__return_false',
+							'items_wrap' => '<ul id="%1$s" class="navbar-nav m-auto mb-2 mb-md-0 %2$s">%3$s</ul>',
+							'depth' => 2,
+							'walker' => new bootstrap_5_wp_nav_menu_walker()
+						));
+						?>
+					</div>
+			</div>
 		</div>
 	</nav>
 

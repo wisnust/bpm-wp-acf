@@ -1,0 +1,1 @@
+jQuery(document).ready(function(t){t(".navbar-toggler").click(function(a){"true"===t(this).attr("aria-expanded")?t(this).addClass("is-active"):t(this).removeClass("is-active")})});

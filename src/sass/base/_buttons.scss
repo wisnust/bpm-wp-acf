@@ -1,0 +1,14 @@
+@mixin btn_custom() {
+    
+    &:hover, &:focus {
+        
+    }
+    
+    @include mq('medium', 'max') {
+        font-size: 14px;
+    }
+}
+
+.btn.btn-primary {
+    @include btn_custom();
+}

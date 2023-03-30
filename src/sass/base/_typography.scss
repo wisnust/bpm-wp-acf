@@ -1,0 +1,35 @@
+h1, .h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    @include mq('medium', 'max') {
+        font-size: 32px;
+    }
+}
+h2, .h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    @include mq('medium', 'max') {
+        font-size: 26px;
+    }
+}
+h3, .h3 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    @include mq('medium', 'max') {
+        font-size: 24px;
+    }
+}
+h4, .h4 {
+    font-size: 26px;
+    @include mq('medium', 'max') {
+        font-size: 18px;
+    }
+}
+h5, .h5 {
+    font-size: 20px;
+    font-weight: 500;
+    @include mq('medium', 'max') {
+        font-size: 16px;
+    }
+}

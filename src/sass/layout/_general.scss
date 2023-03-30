@@ -1,0 +1,36 @@
+html {
+    font-size: 15px;
+}
+body {
+    font-family: $Poppins;
+    margin: 0 !important;
+    .site {
+        overflow: hidden;
+    }
+}
+
+a {
+    transition: border .3s, color .3s;
+}
+
+.container {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq('small') {
+        max-width: 540px;
+    }
+    @include mq('medium') {
+        max-width: 720px;
+    }
+    @include mq('large') {
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: 960px;
+    }
+    @include mq('xlarge') {
+        max-width: 1210px;
+    }
+}

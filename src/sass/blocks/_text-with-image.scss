@@ -1,0 +1,41 @@
+.text-with-image {
+  padding: 125px 0;
+  .text-with-image-text {
+    max-width: 532px;
+    margin-left: auto;
+    .title-line {
+      width: 270px;
+      top: 40px;
+      left: -180px;
+    }
+  }
+  .row {
+    &.flex-row-reverse {
+      .text-with-image-text {
+        margin-left: 0;
+        .title-line {
+          left: 44%;
+          top: 40px;
+          width: 90%;
+        }
+      }
+      .image {
+        text-align: right;
+      }
+    }
+  }
+  @include mq('large', 'max') {
+    padding: 80px 0;
+    .text-with-image-text {
+      .title-line {
+        top: 30px;
+      }
+    }
+  }
+  @include mq('medium', 'max') {
+    padding: 50px 0;
+    .image {
+      margin-bottom: 30px;
+    }
+  }
+}

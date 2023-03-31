@@ -74,6 +74,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Text with Image
+    acf_register_block_type(array(
+        'name'              => 'text-with-image',
+        'title'             => __('Text with Image'),
+        'description'       => __('Used to display Text with Image block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/TextwithImage.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'five-tool-acf-blocks',
+        'icon'              => 'format-aside',
+        'keywords'          => array( 'text', 'with', 'image' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'text_with_image_component_preview' => get_template_directory_uri() . '/acf-preview-images/text-with-image-component-preview.png',
+                )
+            )
+        )
+    ));
+
 }
 add_action('acf/init', 'register_acf_block_types');
 

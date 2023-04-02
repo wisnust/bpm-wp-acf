@@ -116,6 +116,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Banner Image Text
+    acf_register_block_type(array(
+        'name'              => 'banner-image-text',
+        'title'             => __('Banner Image Text'),
+        'description'       => __('Used to display Banner Image Text block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/BannerImageText.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'five-tool-acf-blocks',
+        'icon'              => 'format-aside',
+        'keywords'          => array( 'banner', 'image', 'text' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'banner_image_text_component_preview' => get_template_directory_uri() . '/acf-preview-images/banner-image-text-component-preview.png',
+                )
+            )
+        )
+    ));
+
 }
 add_action('acf/init', 'register_acf_block_types');
 

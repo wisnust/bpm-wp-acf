@@ -136,3 +136,11 @@ a {
 #page {
     overflow: hidden;
 }
+
+.container-mobile {
+    @include mq('medium', 'max') {
+        max-width: 540px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+}

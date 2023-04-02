@@ -95,6 +95,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Testimonials Slider
+    acf_register_block_type(array(
+        'name'              => 'testimonials-slider',
+        'title'             => __('Testimonials Slider'),
+        'description'       => __('Used to display Testimonials Slider block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/TestimonialsSlider.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'five-tool-acf-blocks',
+        'icon'              => 'format-aside',
+        'keywords'          => array( 'testimonials', 'slider' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'testimonials_slider_component_preview' => get_template_directory_uri() . '/acf-preview-images/testimonials-slider-component-preview.png',
+                )
+            )
+        )
+    ));
+
 }
 add_action('acf/init', 'register_acf_block_types');
 

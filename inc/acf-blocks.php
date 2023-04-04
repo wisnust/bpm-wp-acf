@@ -95,6 +95,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Our Team
+    acf_register_block_type(array(
+        'name'              => 'our-team',
+        'title'             => __('Our Team'),
+        'description'       => __('Used to display Our Team block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/OurTeam.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'five-tool-acf-blocks',
+        'icon'              => 'format-aside',
+        'keywords'          => array( 'our', 'team' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'our_team_component_preview' => get_template_directory_uri() . '/acf-preview-images/our-team-component-preview.png',
+                )
+            )
+        )
+    ));
+
     // Block Text with Image
     acf_register_block_type(array(
         'name'              => 'text-with-image',

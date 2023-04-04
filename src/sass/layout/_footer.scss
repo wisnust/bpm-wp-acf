@@ -110,3 +110,92 @@
     }
   }
 }
+
+.footer-cta-email {
+  margin: 165px 0 110px;
+  .wrapper {
+    color: $color-white;
+    background-color: #30d5c8;
+    padding: 60px 85px;
+    margin: 0 -136px;
+  }
+  h2 {
+    margin-bottom: 60px;
+    position: relative;
+    .title-line {
+      position: absolute;
+      top: 100%;
+      left: -170px;
+      margin-top: 30px;
+      background-color: $color-white;
+      &:before {
+        background-color: $color-white;
+      }
+    }
+  }
+  p {
+    font-size: 17px;
+  }
+  .image {
+    margin-top: -115px;
+  }
+  .footer-form {
+    max-width: 380px;
+    margin-left: auto;
+    p {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .gform_wrapper.gravity-theme {
+      input {
+        font-size: 13px;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        padding: 18px 30px;
+        border: 1px solid $color-white;
+        background-color: transparent;
+        color: $color-white;
+        width: 100%;
+        outline: none !important;
+        &::placeholder {
+          color: $color-white;
+        }
+      }
+      .gform_footer {
+        padding: 0;
+        margin-top: 10px;
+        .gform_button  {
+          &:hover, &:focus {
+            color: $color-green;
+            background-color: $color-white;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1440px) {
+    background-color: $color-green;
+    .wrapper {
+      margin: 0;
+      max-width: 100%;
+      padding: 60px 35px;
+    }
+  }
+  @include mq('medium', 'max') {
+    margin: 60px 0;
+    .wrapper {
+      padding: 60px 0;
+    }
+    .image {
+      margin: 0;
+    }
+    .footer-form {
+      max-width: 100%;
+      .gform_wrapper.gravity-theme {
+        input {
+          padding: 14px 20px;
+        }
+      }
+    }
+  }
+}

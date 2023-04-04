@@ -29,7 +29,48 @@
 
 	$footerInfoText = get_field('footer_info_text', 'option');
 	
+
+	// Footer CTA
+	$footerCtaTitle = get_field('footer_cta_title', 'option');
+	$footerCtaDescription = get_field('footer_cta_description', 'option');
+	$footerCtaImageCenter = get_field('footer_cta_image_center', 'option');
+	$footerCtaFormDescription = get_field('footer_cta_form_description', 'option');
+	$footerCtaFormID = get_field('footer_cta_form_id', 'option');
 ?>
+	<div class="footer-cta-email">
+		<div class="container">
+			<div class="wrapper">
+				<div class="row">
+					<div class="col-md-4">
+						<?php if ( $footerCtaTitle ): ?>
+							<h2><?php echo $footerCtaTitle; ?> <div class="title-line"></div></h2>
+						<?php endif;?>
+						<?php if ( $footerCtaDescription ): ?>
+							<p><?php echo $footerCtaDescription; ?></p>
+						<?php endif;?>
+					</div>
+					<div class="col-md-4">
+						<?php 
+						if( !empty( $footerCtaImageCenter ) ): ?>
+							<div class="image">
+								<img src="<?php echo esc_url($footerCtaImageCenter['url']); ?>" alt="<?php echo esc_attr($footerCtaImageCenter['alt']); ?>" />
+							</div>
+						<?php endif; ?>
+					</div>
+					<div class="col-md-4">
+						<div class="footer-form">
+							<!-- Footer FORM -->
+							<?php if ( $footerCtaFormDescription ): ?>
+								<p><?php echo $footerCtaFormDescription; ?> <div class="title-line"></div></p>
+							<?php endif;?>
+							<?php echo do_shortcode('[gravityform id="' . $footerCtaFormID . '" title="false" description="false" ajax="true" tabindex="49"]'); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<footer id="colophon" class="footer">
 		<div class="container">
 			<div class="footer-main">

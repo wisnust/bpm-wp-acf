@@ -27,7 +27,9 @@ h2, .h2 {
 h3, .h3 {
     font-size: 36px;
     line-height: 1.2;
-    margin-bottom: 10px;
+    font-family: $Lora;
+    font-weight: 400;
+    margin-bottom: 30px;
     @include mq('large', 'max') {
         font-size: 32px;
     }

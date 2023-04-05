@@ -200,6 +200,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Recent Blogs
+    acf_register_block_type(array(
+        'name'              => 'recent-blogs',
+        'title'             => __('Recent Blogs'),
+        'description'       => __('Used to display Recent Blogs block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/RecentBlogs.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'five-tool-acf-blocks',
+        'icon'              => 'format-aside',
+        'keywords'          => array( 'recent', 'blogs' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'recent_blogs_component_preview' => get_template_directory_uri() . '/acf-preview-images/recent-blogs-component-preview.png',
+                )
+            )
+        )
+    ));
+
 }
 add_action('acf/init', 'register_acf_block_types');
 

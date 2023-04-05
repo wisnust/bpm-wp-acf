@@ -95,6 +95,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Services Items
+    acf_register_block_type(array(
+        'name'              => 'services-items',
+        'title'             => __('Services Items'),
+        'description'       => __('Used to display Services Items block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/ServicesItems.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'five-tool-acf-blocks',
+        'icon'              => 'format-aside',
+        'keywords'          => array( 'services', 'items' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'services_items_component_preview' => get_template_directory_uri() . '/acf-preview-images/services-items-component-preview.png',
+                )
+            )
+        )
+    ));
+
     // Block Our Team
     acf_register_block_type(array(
         'name'              => 'our-team',

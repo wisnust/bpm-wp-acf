@@ -37,9 +37,9 @@ $ourServicesDescription = get_field('our_services_description');
               <?php echo $ourServicesTitle; ?>
               <div class="title-line reverse"></div>
             </h2>
-            <?php if ( $ourServicesDescription ): ?>
-              <?php echo $ourServicesDescription; ?>
-            <?php endif; ?>
+          <?php endif; ?>
+          <?php if ( $ourServicesDescription ): ?>
+            <?php echo $ourServicesDescription; ?>
           <?php endif; ?>
         </div>
       </div>

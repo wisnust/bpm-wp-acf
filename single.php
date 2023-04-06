@@ -42,8 +42,57 @@ get_header();
 				</div>
 			</div>
 		</div>
+
+		<div class="related-posts section">
+			<div class="container">
+				<div class="related-posts-title text-center">
+					<h2 class="d-inline-block">
+						Related Post
+						<div class="title-line"></div>
+					</h2>
+				</div>
+				<?php
+				$post_id = get_the_ID();
+				$categories = wp_get_post_categories( $post_id );
+				$cat_ids = array();
+				foreach( $categories as $individual_cat ) $cat_ids[] = $individual_cat;
+				$args = array(
+						'category__in' => $cat_ids,
+						'post_type' => 'post',
+						'post_status' => 'publish',
+						'orderby' => 'date',
+						'order' => 'DESC',
+						'posts_per_page' => 3,
+						'post__not_in' => array( $post_id )
+				);
+				$query = new WP_Query( $args );
+				if ( $query->have_posts() ) :
+				?>
+				<div class="blogs-grid">
+					<div class="row">
+						<?php while ( $query->have_posts() ) : $query->the_post(); ?>
+						<div class="col-md-4">
+							<div class="blogs-grid-item">
+								<?php if ( has_post_thumbnail() ) : ?>
+								<a href="<?php the_permalink(); ?>" class="featured-image">
+										<?php the_post_thumbnail( 'large' ); ?>
+								</a>
+								<?php endif; ?>
+								<p class="post-date"><?php echo get_the_date(); ?></p>
+								<h2 class="h5"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								<a href="<?php the_permalink(); ?>" class="btn-link">Learn More <i class="fa fa-arrow-right"></i></a>
+							</div>
+						</div>
+						<?php endwhile; ?>
+					</div>
+				</div>
+				<?php endif; wp_reset_postdata(); ?>
+				<div class="btn-cta text-center">
+					<a href="/blogs" class="btn btn-green">View All Blogs <i class="fa fa-arrow-right"></i></a>
+				</div>
+			</div>
+		</div>
 		<?php
-			// get_template_part( 'template-parts/content', get_post_type() );
 			endwhile;
 		?>
 	</main>

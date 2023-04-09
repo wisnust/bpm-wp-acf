@@ -25,6 +25,18 @@
     .btn-cta {
       margin-top: 50px;
     }
+    .contact-call {
+      font-size: 18px;
+      font-weight: 500;
+      > div {
+        margin-bottom: 10px;
+        > a {
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
   }
   @include mq('large', 'max') {
     .banner-image-text-content {
@@ -44,6 +56,10 @@
       }
       .btn-cta {
         margin-top: 0;
+      }
+      .contact-call {
+        font-size: 14px;
+        margin-bottom: 30px;
       }
     }
     .banner-image-text-image {

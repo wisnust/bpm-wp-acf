@@ -200,6 +200,27 @@ function register_acf_block_types() {
         )
     ));
 
+    // Block Contact Banner
+    acf_register_block_type(array(
+        'name'              => 'contact-banner',
+        'title'             => __('Contact Banner'),
+        'description'       => __('Used to display Contact Banner block'),
+        'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/ContactBanner.php',
+        'mode'              => 'edit',
+        'supports'          => array('align' => false),
+        'category'          => 'five-tool-acf-blocks',
+        'icon'              => 'format-aside',
+        'keywords'          => array( 'contact', 'banner' ),
+        'example'  => array(
+            'attributes' => array(
+                'mode' => 'preview',
+                'data' => array(
+                    'contact_banner_text_component_preview' => get_template_directory_uri() . '/acf-preview-images/contact-banner-component-preview.png',
+                )
+            )
+        )
+    ));
+
     // Block Recent Blogs
     acf_register_block_type(array(
         'name'              => 'recent-blogs',

@@ -70,6 +70,25 @@ a {
         font-size: 18px;
         margin-bottom: 25px;
     }
+    ul {
+        font-size: 16px;
+        list-style: none;
+        padding: 0;
+        li {
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+            &:before {
+                color: $color-green;
+                content: "\f00c";
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+            }
+        }
+    }
     @include mq('large', 'max') {
         h2 {
             margin-bottom: 50px;

@@ -1,0 +1,20 @@
+.blogs-featured {
+  padding: 95px 0 0;
+  margin-bottom: 60px;
+  .blogs-featured-title {
+    margin-bottom: 60px;
+    h2 {
+      position: relative;
+      margin-bottom: 30px;
+      .title-line {
+        position: absolute;
+        top: 100%;
+        left: -90px;
+        margin-top: 5px;
+      }
+    }
+  }
+  @include mq('medium', 'max') {
+    padding-top: 60px;
+  }
+}

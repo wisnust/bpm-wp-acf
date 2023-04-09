@@ -48,7 +48,7 @@ get_header();
 				<div class="related-posts-title text-center">
 					<h2 class="d-inline-block">
 						Related Post
-						<div class="title-line"></div>
+						<div class="title-line reverse"></div>
 					</h2>
 				</div>
 				<?php
@@ -92,6 +92,7 @@ get_header();
 				</div>
 			</div>
 		</div>
+		
 		<?php
 			endwhile;
 		?>

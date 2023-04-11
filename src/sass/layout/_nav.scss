@@ -13,6 +13,17 @@
         text-transform: uppercase;
         letter-spacing: 2.2px;
         padding: 25px 26px;
+        &.active {
+          color: $color-black;
+        }
+        &:hover, &:focus {
+          color: $color-black !important;
+        }
+      }
+      &.menu-what-we-do {
+        .nav-link {
+          color: rgba(0,0,0,.55);
+        }
       }
     }
   }

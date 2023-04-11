@@ -2,9 +2,9 @@
 /**
  * Recent Blogs
  */
-if( isset( $block['data']['our_team_component_preview'] )  ) :    /* rendering in inserter preview  */
+if( isset( $block['data']['recent_blogs_component_preview'] )  ) :    /* rendering in inserter preview  */
 
-    echo '<img src="'. $block['data']['our_team_component_preview'] .'" style="width:100%; height:auto;">';
+    echo '<img src="'. $block['data']['recent_blogs_component_preview'] .'" style="width:100%; height:auto;">';
 
 else : /* rendering in editor body */
 

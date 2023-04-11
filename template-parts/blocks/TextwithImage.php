@@ -45,7 +45,7 @@ $alignment = get_field('alignment');
     }
   ?>
 </style>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); if ( $backgroundColor ) { echo ' padding-bg'; } ?>">
   <div class="container">
     <div class="row <?php if ($alignment == 'left') { echo 'flex-row-reverse'; } ?>">
       <div class="col-md-6">

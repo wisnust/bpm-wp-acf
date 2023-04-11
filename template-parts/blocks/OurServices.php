@@ -26,8 +26,9 @@ if( !empty($block['align']) ) {
 // Load values
 $ourServicesTitle = get_field('our_services_title');
 $ourServicesDescription = get_field('our_services_description');
+$sectionID = get_field('section_id');
 ?>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
+<section id="<?php echo esc_attr(($sectionID) ? $sectionID : $id); ?>" class="<?php echo esc_attr($className); ?>">
   <div class="container">
     <div class="section-title text-center">
       <div class="row">

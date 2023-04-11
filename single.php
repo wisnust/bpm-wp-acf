@@ -25,6 +25,7 @@ get_header();
 			<div class="blog-single-content">
 				<h1><?php the_title(); ?> <div class="title-line"></div></h1>
 				<?php echo the_content(); ?>
+				<div class="clearfix"></div>
 				<div class="social-sharer">
 					<p>Share On</p>
 					<?php

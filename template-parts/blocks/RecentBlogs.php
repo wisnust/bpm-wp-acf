@@ -44,7 +44,7 @@ $recentBlogsTitle = get_field('recent_blogs_title');
         'post_status' => 'publish',
         'orderby' => 'date',
         'order' => 'DESC',
-        'posts_per_page' => 5,
+        'posts_per_page' => 9,
         'paged' => $paged
     );
     $query = new WP_Query( $args );

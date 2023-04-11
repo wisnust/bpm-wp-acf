@@ -215,7 +215,7 @@ function register_acf_block_types() {
             'attributes' => array(
                 'mode' => 'preview',
                 'data' => array(
-                    'contact_banner_text_component_preview' => get_template_directory_uri() . '/acf-preview-images/contact-banner-component-preview.png',
+                    'contact_banner_component_preview' => get_template_directory_uri() . '/acf-preview-images/contact-banner-component-preview.png',
                 )
             )
         )
@@ -236,7 +236,7 @@ function register_acf_block_types() {
             'attributes' => array(
                 'mode' => 'preview',
                 'data' => array(
-                    'contact_form_text_component_preview' => get_template_directory_uri() . '/acf-preview-images/contact-form-component-preview.png',
+                    'contact_form_component_preview' => get_template_directory_uri() . '/acf-preview-images/contact-form-component-preview.png',
                 )
             )
         )

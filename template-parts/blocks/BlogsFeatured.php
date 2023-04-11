@@ -26,7 +26,7 @@ if( !empty($block['align']) ) {
 // Load values
 $blogFeaturedTitle = get_field('blog_featured_title');
 $blogFeaturedDescription = get_field('blog_featured_description');
-// $blogFeaturedPosts = get_field('blog_featured_posts');
+$blogFeaturedPosts = get_field('blog_featured_posts');
 ?>
 <section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
   <div class="container">
@@ -42,7 +42,6 @@ $blogFeaturedDescription = get_field('blog_featured_description');
       <?php endif; ?>
     </div>
     <?php
-    $blogFeaturedPosts = get_field('blog_featured_posts');
     if( $blogFeaturedPosts ):
     ?>
     <div class="blogs-grid">

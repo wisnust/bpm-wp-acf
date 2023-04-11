@@ -31,6 +31,7 @@ $textWithImageButton = get_field('text_with_image_button');
 $textWithImageImage = get_field('text_with_image_image');
 
 // Advanced
+$sectionID = get_field('section_id');
 $backgroundColor = get_field('background_color');
 $alignment = get_field('alignment');
 
@@ -38,14 +39,15 @@ $alignment = get_field('alignment');
 <style>
   <?php
     // Advanced
-    if ( $backgroundColor ) {
-      echo '#' . esc_attr($id) . ' {';
+    if ($backgroundColor) {
+      $selector = ($sectionID) ? '#' . esc_attr($sectionID) . ' {' : '#' . esc_attr($id) . ' {';
+      echo $selector;
       echo 'background-color:' . $backgroundColor  . ';';
       echo '}';
     }
   ?>
 </style>
-<section id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); if ( $backgroundColor ) { echo ' padding-bg'; } ?>">
+<section id="<?php echo esc_attr(($sectionID) ? $sectionID : $id); ?>" class="<?php echo esc_attr($className . (($backgroundColor) ? ' padding-bg' : '')); ?>">
   <div class="container">
     <div class="row <?php if ($alignment == 'left') { echo 'flex-row-reverse'; } ?>">
       <div class="col-md-6">

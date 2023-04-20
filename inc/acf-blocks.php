@@ -13,14 +13,14 @@ if ( !class_exists('acf') ) {
 }
 
 /**
- * Register FiveTool Block Category
+ * Register Best Practice Media Block Category
  */
-function five_tool_block_categories( $categories, $post ) {
+function bpm_block_categories( $categories, $post ) {
 	return array_merge(
 		array(
 			array(
-				'slug' => 'five-tool-acf-blocks',
-				'title' => __( 'Five Tool Blocks', 'five-tool-acf-blocks' ),
+				'slug' => 'bpm-acf-blocks',
+				'title' => __( 'Best Practice Media Blocks', 'bpm-acf-blocks' ),
 				'icon'  => 'welcome-widgets-menus',
 			),
 		),
@@ -28,7 +28,7 @@ function five_tool_block_categories( $categories, $post ) {
 		
 	);
 }
-add_filter( 'block_categories', 'five_tool_block_categories', 10, 2 );
+add_filter( 'block_categories', 'bpm_block_categories', 10, 2 );
 
 function register_acf_block_types() {
 
@@ -40,8 +40,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/Hero.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'index-card',
         'keywords'          => array( 'hero' ),
         'example'  => array(
             'attributes' => array(
@@ -61,7 +61,7 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/HeroCTA.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
+        'category'          => 'bpm-acf-blocks',
         'icon'              => 'format-aside',
         'keywords'          => array( 'hero', 'cta' ),
         'example'  => array(
@@ -82,8 +82,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/OurServices.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'grid-view',
         'keywords'          => array( 'our', 'services' ),
         'example'  => array(
             'attributes' => array(
@@ -103,8 +103,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/ServicesItems.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'list-view',
         'keywords'          => array( 'services', 'items' ),
         'example'  => array(
             'attributes' => array(
@@ -124,8 +124,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/OurTeam.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'groups',
         'keywords'          => array( 'our', 'team' ),
         'example'  => array(
             'attributes' => array(
@@ -145,8 +145,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/TextwithImage.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'media-document',
         'keywords'          => array( 'text', 'with', 'image' ),
         'example'  => array(
             'attributes' => array(
@@ -166,8 +166,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/TestimonialsSlider.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'testimonial',
         'keywords'          => array( 'testimonials', 'slider' ),
         'example'  => array(
             'attributes' => array(
@@ -187,8 +187,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/BannerImageText.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'cover-image',
         'keywords'          => array( 'banner', 'image', 'text' ),
         'example'  => array(
             'attributes' => array(
@@ -208,8 +208,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/ContactBanner.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'feedback',
         'keywords'          => array( 'contact', 'banner' ),
         'example'  => array(
             'attributes' => array(
@@ -229,8 +229,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/ContactForm.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'feedback',
         'keywords'          => array( 'contact', 'form' ),
         'example'  => array(
             'attributes' => array(
@@ -250,8 +250,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/RecentBlogs.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'list-view',
         'keywords'          => array( 'recent', 'blogs' ),
         'example'  => array(
             'attributes' => array(
@@ -271,8 +271,8 @@ function register_acf_block_types() {
         'render_template'   => get_stylesheet_directory() . '/template-parts/blocks/BlogsFeatured.php',
         'mode'              => 'edit',
         'supports'          => array('align' => false),
-        'category'          => 'five-tool-acf-blocks',
-        'icon'              => 'format-aside',
+        'category'          => 'bpm-acf-blocks',
+        'icon'              => 'grid-view',
         'keywords'          => array( 'blogs', 'featured' ),
         'example'  => array(
             'attributes' => array(
